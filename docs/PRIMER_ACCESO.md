@@ -45,3 +45,13 @@ No agregar service_role, secret keys, base de datos ni contraseña al cliente we
 7. Revisar errores de consola y tiempos de respuesta.
 
 No migrar históricos hasta concluir la integración y las pruebas de todos los módulos.
+
+## Cuenta solicitada
+
+Correo administrador previsto: `Duralconsructores@gmail.com`.
+
+En Supabase Dashboard → Authentication → Users → Invite user, invitar esta dirección de correo. Aceptar la invitación desde el buzón y definir una contraseña robusta (mínimo recomendado 12 caracteres). No usar `1234` ni colocar contraseñas en repositorios.
+
+Después de que el usuario de Auth exista, utilizar su UUID en la asignación de membresía y división indicada arriba. Configurar Authentication → URL Configuration → Site URL y Redirect URLs con el dominio real de Netlify y `https://<dominio>/cuenta`, para que funcione el correo de recuperación.
+
+La nueva página `/cuenta` permite recuperar el acceso por correo y cambiar la contraseña después de autenticarse. Su funcionamiento requiere configurar previamente el sitio y el servicio de correo de Supabase.
