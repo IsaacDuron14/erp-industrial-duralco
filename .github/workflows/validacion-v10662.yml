@@ -1,0 +1,24 @@
+name: Validación COREBOLT V106.62
+on:
+  push:
+    branches:
+      - desarrollo/integracion-modulos
+  pull_request:
+    branches:
+      - main
+jobs:
+  equivalencia-pernos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: package-lock.json
+      - name: Instalar dependencias
+        run: npm install --ignore-scripts
+      - name: Verificar calculadora V106.62
+        run: npm test
+      - name: Comprobar TypeScript
+        run: npm run typecheck
