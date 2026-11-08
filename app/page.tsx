@@ -4,7 +4,7 @@ import {useState} from "react";
 
 type Entry={label:string;href?:string;note?:string};
 const sections:{name:string;icon:string;entries:Entry[]}[]=[
-{name:"Catálogo",icon:"📋",entries:[{label:"Pernos",href:"/pernos",note:"Réplica de prueba V106.62"},{label:"Placas",note:"Calculadora original pendiente"},{label:"Productos",note:"Tuercas, arandelas y accesorios: pendiente"}]},
+{name:"Catálogo",icon:"📋",entries:[{label:"Pernos",href:"/pernos",note:"Réplica de prueba V106.62"},{label:"Placas",href:"/placas",note:"Réplica de prueba V106.62"},{label:"Productos",note:"Tuercas, arandelas y accesorios: pendiente"}]},
 {name:"Ventas",icon:"💼",entries:[{label:"Cotización",note:"Pendiente de integración"},{label:"Recibo",note:"Pendiente de integración"},{label:"Factura",note:"Pendiente de integración"},{label:"Entrega",note:"Pendiente de integración"},{label:"Cliente",href:"/clientes"}]},
 {name:"Compras",icon:"🛒",entries:[{label:"Orden Compra",note:"Pendiente de integración"}]},
 {name:"Producción",icon:"🏭",entries:[{label:"Orden Trabajo",note:"Pendiente de integración"},{label:"Presupuesto",note:"Pendiente de integración"},{label:"Cierre Real",note:"Pendiente de integración"},{label:"Personal",note:"Pendiente de integración"},{label:"Asistencia",note:"Pendiente de integración"},{label:"Producción",note:"Pendiente de integración"},{label:"Costos",note:"Pendiente de integración"}]},
