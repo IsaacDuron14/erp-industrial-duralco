@@ -16,3 +16,32 @@
 .legacy-module h3{font-size:15px;margin:0;color:#e7edf1}.legacy-action{display:inline-block;background:#3d7691;color:white;padding:10px 14px;border-radius:7px;text-decoration:none;font-size:12px;font-weight:700}
 .legacy-soon{font-size:11px;color:#c2a065}.legacy-footnote{font-size:11px;text-align:center;color:#8b98a3;margin-top:24px}
 @media(max-width:450px){.legacy-mark{flex-basis:42px;height:39px}.legacy-header h1{font-size:17px}.legacy-overline{font-size:10px}.legacy-subtitle{font-size:9px}.legacy-module-grid{grid-template-columns:1fr 1fr}.legacy-module{padding:12px}.legacy-module h3{font-size:13px}}
+
+/* COREBOLT V106.62-inspired inner module skin (scoped to catalog) */
+.catalog-shell{--line:#30414d;--surface:#19232d;--field:#111c26;--ink:#e8eef3;--muted:#a6b7c3}
+.catalog-header{max-width:none}.catalog-shell .legacy-header{justify-content:initial}
+.catalog-nav{padding-top:13px;padding-bottom:13px}.catalog-nav .catalog-active{background:#c2a065;color:#1b1a12;border-color:#c2a065}
+.catalog-main{margin:0 auto;padding-top:4px}
+.catalog-shell .card{background:linear-gradient(180deg,#1d2933,#17212a);border:1px solid var(--line);box-shadow:0 6px 22px #0002;color:var(--ink);margin-bottom:14px;border-radius:10px}
+.catalog-shell .card h1,.catalog-shell .card h2{color:#f3f6f9}
+.catalog-shell .card h2{margin:0 0 12px;font-size:19px}
+.catalog-section-head{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:10px}
+.catalog-section-head h2{margin:7px 0 0!important}.catalog-sql-status{border:1px solid #3c6c64;background:#142d2c;color:#a6ddca;font-size:11px;font-weight:800;border-radius:30px;padding:7px 11px}
+.catalog-shell .muted{color:var(--muted);line-height:1.6}
+.catalog-shell label{font-size:12px;color:#c8d7e1;margin-bottom:8px}
+.catalog-shell input,.catalog-shell select{width:100%;box-sizing:border-box;min-height:41px;background:var(--field);border:1px solid #3b5365;color:#f3f6fa;border-radius:7px;padding:9px 11px;font-size:14px}
+.catalog-shell input:focus,.catalog-shell select:focus{outline:2px solid #c2a065;outline-offset:1px}
+.catalog-shell button{background:linear-gradient(180deg,#327c9b,#20536e);border:1px solid #4888a4;box-shadow:0 2px 0 #0c2433;color:white;border-radius:7px;min-height:38px;padding:8px 13px}
+.catalog-shell button:disabled{opacity:.4}
+.catalog-shell .catalog-entry{border-top:3px solid #c2a065}
+.catalog-shell .catalog-entry form .grid{margin-top:17px}
+.catalog-table-wrap{overflow:auto;margin-top:18px;border:1px solid #344b5b;border-radius:8px}
+.catalog-shell table{border-collapse:collapse;min-width:840px;width:100%;font-size:12px}
+.catalog-shell thead th{background:#233e50;color:#dfeaf0;text-transform:uppercase;letter-spacing:.35px;white-space:nowrap;font-size:11px;border-bottom:2px solid #4c738a}
+.catalog-shell tbody tr:nth-child(even){background:#1d2d38}.catalog-shell tbody tr:hover{background:#283e4c}
+.catalog-shell td,.catalog-shell th{padding:10px;border-right:1px solid #304755;border-bottom:1px solid #304755;color:#d8e3eb}
+.catalog-shell td:last-child,.catalog-shell th:last-child{border-right:none}
+.catalog-shell td button{min-height:30px;font-size:11px;padding:5px 10px}
+.catalog-footer{margin-top:15px;justify-content:flex-end}
+.catalog-shell .danger{color:#ff9b92}.catalog-shell .ok{color:#98dfb0}
+@media(max-width:520px){.catalog-main{padding:8px 10px 35px}.catalog-shell .card{padding:14px}.catalog-section-head h2{font-size:16px}.catalog-shell .catalog-header .legacy-brand h1{font-size:16px}}
