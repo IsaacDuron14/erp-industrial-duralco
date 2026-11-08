@@ -1,4 +1,4 @@
-# Auditoría de almacenamiento y relaciones — COREBOLT V106.62 → COREBOLT 2.0
+> **CORRECCIÓN POSTERIOR (auditoría del exportador efectivo):** aunque la constante inicial `BACKUP_KEYS` tiene 57 claves, el código posterior en V106.62 redefine `window.exportarRespaldo` para utilizar `backupKeys93()`, agregando **13 claves extra**, entre ellas Inventario Maestro, Kardex y Costeo. El exportador final intenta incluir 70 claves; no se debe afirmar que el respaldo carece de Inventario/Kardex solo por la constante inicial. Ver `docs/INVENTARIO_KARDEX_AUDITORIA_Y_RECUPERACION.md`.\n\n# Auditoría de almacenamiento y relaciones — COREBOLT V106.62 → COREBOLT 2.0
 
 **Estado:** primera inspección estática, sin ejecución ni importación de datos.
 **Fuente:** copia local de `index.html` original V106.62 (27,885 líneas, ~1.8 MB).
