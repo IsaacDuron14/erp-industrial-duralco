@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/browser";
-const EMAIL="Duralconsructores@gmail.com";
+const EMAIL="duralconstructores@gmail.com";
 export default function Cuenta(){
   const [email,setEmail]=useState(EMAIL);
   const [password,setPassword]=useState("");
