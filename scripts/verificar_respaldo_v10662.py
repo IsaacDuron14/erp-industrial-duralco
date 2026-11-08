@@ -7,7 +7,7 @@ import pathlib
 import sys
 
 BACKUP = """bolt-config bolt-params bolt-list bolt-materiales placa-config placa-params placa-list placa-espesores tuerca-config tuerca-params tuerca-list cotiz-fields cotiz-overrides cotiz-clientes cotiz-vendedores cotiz-metodos cotiz-counter cotiz-historial inv-varilla inv-placas inv-tuercas fact-sucursal fact-fields fact-overrides fact-counter fact-historial presup-actual presup-historial presup-operarios presup-tiempos presup-asignacion presup-herramientas cierre-actual cierre-historial ot-fields ot-counter ot-historial auth-config oc-fields oc-counter oc-items oc-historial oc-proveedores bitacora gastos-operativos bancos-cuentas bancos-movimientos entrega-fields entrega-counter entrega-historial recibo-counter recibo-historial recibo-porcentajes requisiciones-historial personal-operarios-v1 produccion-registros-v1 produccion-config-v1""".split()
-EXTRA = """inventario-maestro-v1 inventario-kardex-v1 inventario-requisiciones-v1 inventario-precios-fusion-v89 prod-divisiones prod-categorias agente-api-url agente-chat app-version""".split()
+EXTRA = """inventario-maestro-v1 inventario-kardex-v1 inventario-costeo-v1 inventario-requisiciones-v1 inventario-precios-fusion-v89 factura-informe-ajustes-v87 prod-categorias prod-divisiones fact-counter-fiscal-v2 presup-counter agente-chat agente-api-url personal-operarios-seed-v66""".split()
 HISTORY = """cotiz-historial presup-historial ot-historial fact-historial recibo-historial oc-historial entrega-historial cierre-historial bancos-movimientos requisiciones-historial""".split()
 
 def decode(raw):
@@ -29,7 +29,7 @@ def normalizar(numero):
 
 def auditar(data):
     result={"version":"V106.62","solo_lectura":True,"claves_respaldo":len(BACKUP),
-            "claves_presentes":sum(k in data for k in BACKUP),
+            "claves_presentes":sum(k in data for k in BACKUP),\n            "claves_totales_exportador_final":len(set(BACKUP+EXTRA)),
             "claves_ausentes":[k for k in BACKUP if k not in data],
             "claves_extra_presentes":[k for k in EXTRA if k in data],
             "claves_extra_ausentes":[k for k in EXTRA if k not in data],
@@ -59,7 +59,7 @@ def auditar(data):
         missing=sum(normalizar(row[field]) not in quote_numbers for row in rows if isinstance(row,dict) and row.get(field))
         result["colecciones"][key]["referencias_cotizacion_no_encontradas"]=missing
         if missing:result["alertas"].append("REFERENCIA_NO_ENCONTRADA:"+key)
-    result["advertencia"]="El respaldo estándar puede omitir KV remoto, otros dispositivos y datos del Inventario Maestro/Kardex. No demuestra una migración completa."
+    result["advertencia"]="El exportador final V106.62 incorpora Maestro/Kardex/Costeo entre sus claves extras; comprueba valores no nulos y otras fuentes (KV remoto/dispositivos) antes de declarar migración completa."
     return result
 
 def main():
