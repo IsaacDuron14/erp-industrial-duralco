@@ -16,3 +16,27 @@
 .legacy-module h3{font-size:15px;margin:0;color:#e7edf1}.legacy-action{display:inline-block;background:#3d7691;color:white;padding:10px 14px;border-radius:7px;text-decoration:none;font-size:12px;font-weight:700}
 .legacy-soon{font-size:11px;color:#c2a065}.legacy-footnote{font-size:11px;text-align:center;color:#8b98a3;margin-top:24px}
 @media(max-width:450px){.legacy-mark{flex-basis:42px;height:39px}.legacy-header h1{font-size:17px}.legacy-overline{font-size:10px}.legacy-subtitle{font-size:9px}.legacy-module-grid{grid-template-columns:1fr 1fr}.legacy-module{padding:12px}.legacy-module h3{font-size:13px}}
+
+/* Replica V106.62, pernos: adaptacion visual sin alterar calculos */
+.pernos-shell{padding-bottom:90px}.pernos-main{max-width:940px}
+.pernos-caution{padding:12px;background:#342d1b;color:#e8d7a9;border:1px solid #675633;border-radius:9px;font-size:13px;line-height:1.6;margin-bottom:13px}
+.pernos-panel{margin:12px 0;background:#161d24;border:1px solid #2a3540;border-radius:10px;color:#dee4e7;overflow:hidden}
+.pernos-panel summary,.pernos-fixed-head{cursor:pointer;background:#1c2530;border-bottom:1px solid #2a3540;display:flex;align-items:center;justify-content:space-between;padding:15px;color:#e9f1f5;font-size:17px;font-weight:750;margin:0}
+.pernos-panel-body{padding:15px}.pernos-panel-body p{font-size:13px;color:#9eacb8;line-height:1.55}
+.pernos-panel label{display:block;color:#becbd5;font-size:12px;line-height:1.5;font-weight:650;margin:8px 0}
+.pernos-panel input:not([type=checkbox]),.pernos-panel select{display:block;min-height:41px;width:100%;background:#101921;color:#ebf2f7;border:1px solid #3c5262;border-radius:7px;padding:8px 10px;font-size:14px;margin-top:5px}
+.pernos-panel input:disabled{opacity:.56}
+.pernos-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 14px}
+.pernos-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.pernos-checkbox{display:flex!important;gap:10px;align-items:center}.pernos-checkbox input{width:auto!important;margin:0}
+.pernos-panel button{background:#1c3548;border:1px solid #33536b;color:#ebf4f7;font-size:12px;min-height:38px;padding:8px 12px}
+.pernos-panel .pernos-primary{display:block;width:100%;background:linear-gradient(#60aecf,#387b9a);color:#071b29;font-weight:850;border-color:#6cbedc;margin-top:14px}
+.pernos-warning{color:#e8b0a0!important;border:1px solid #824b40;background:#35231f;padding:10px;border-radius:7px}
+.pernos-preview{border:1px solid #326b68;background:#16302e;color:#d2eae3!important;padding:12px;border-radius:7px}
+.pernos-row{padding:13px 0;border-bottom:1px solid #32434e}
+.pernos-row strong,.pernos-row small{display:block}.pernos-row small{color:#98a8b4;margin-top:5px}
+.pernos-row-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:7px;font-size:12px}
+.pernos-table-wrap{overflow:auto;max-height:360px}.pernos-panel table{min-width:700px;font-size:12px}.pernos-panel th{background:#244052;color:#e8f1f7}.pernos-panel td,.pernos-panel th{border:1px solid #2f4655;padding:8px}
+.pernos-summary{position:sticky;bottom:0;border:1px solid #3d6072;background:#122535;color:#e7f4f7;padding:12px 17px;border-radius:9px;box-shadow:0 -4px 20px #0005;display:block;text-align:right;font-size:13px}
+.pernos-summary strong{font-size:19px;color:#e6c27d}.pernos-summary div{margin-top:5px;color:#a6bfcb}
+@media(max-width:540px){.pernos-grid.three{grid-template-columns:repeat(2,minmax(0,1fr))}.pernos-panel-body{padding:12px}.pernos-main{padding:12px}}
