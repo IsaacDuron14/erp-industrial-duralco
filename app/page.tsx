@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import {useState} from "react";
+import AlertaAnticiposOT from "@/components/AlertaAnticiposOT";
 
 type Entry={label:string;href?:string;note?:string};
 const sections:{name:string;icon:string;entries:Entry[]}[]=[
@@ -9,13 +10,13 @@ const sections:{name:string;icon:string;entries:Entry[]}[]=[
 {name:"Compras",icon:"🛒",entries:[{label:"Orden Compra",note:"Pendiente de integración"}]},
 {name:"Producción",icon:"🏭",entries:[{label:"Orden Trabajo",note:"Pendiente de integración"},{label:"Presupuesto",note:"Pendiente de integración"},{label:"Cierre Real",note:"Pendiente de integración"},{label:"Personal",note:"Pendiente de integración"},{label:"Asistencia",note:"Pendiente de integración"},{label:"Producción",note:"Pendiente de integración"},{label:"Costos",note:"Pendiente de integración"}]},
 {name:"Control",icon:"📦",entries:[{label:"Inventario",note:"Pendiente de integración"},{label:"Bancos",note:"Pendiente de integración"},{label:"Cuentas",note:"Pendiente de integración"}]},
-{name:"Analítica",icon:"📊",entries:[{label:"Dashboard",note:"Pendiente de integración"},{label:"Informes",note:"Pendiente de integración"},{label:"Finanzas",note:"Pendiente de integración"}]},
+{name:"Analítica",icon:"📊",entries:[{label:"Dashboard",note:"Pendiente de integración"},{label:"Informes",href:"/informes/anticipos",note:"Control de anticipos OT en integración"},{label:"Finanzas",note:"Pendiente de integración"}]},
 {name:"Sistema",icon:"⚙️",entries:[{label:"Aprende",note:"Capacitación pendiente"},{label:"Agente",note:"Pendiente de integración"},{label:"Auditoría",note:"Pendiente de integración"},{label:"Accesos",note:"Administración pendiente"},{label:"Mi cuenta",href:"/cuenta"}]}
 ];
 export default function Home(){
 const [active,setActive]=useState("Catálogo");
 const section=sections.find(s=>s.name===active)||sections[0];
-return <div className="legacy-shell">
+return <div className="legacy-shell"><AlertaAnticiposOT/>
 <div className="legacy-stripe" />
 <header className="legacy-header">
 <div className="legacy-mark" aria-label="Grupo Duralco">D</div>
