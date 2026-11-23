@@ -40,3 +40,15 @@
 .pernos-summary{position:sticky;bottom:0;border:1px solid #3d6072;background:#122535;color:#e7f4f7;padding:12px 17px;border-radius:9px;box-shadow:0 -4px 20px #0005;display:block;text-align:right;font-size:13px}
 .pernos-summary strong{font-size:19px;color:#e6c27d}.pernos-summary div{margin-top:5px;color:#a6bfcb}
 @media(max-width:540px){.pernos-grid.three{grid-template-columns:repeat(2,minmax(0,1fr))}.pernos-panel-body{padding:12px}.pernos-main{padding:12px}}
+
+/* Alerta OT: modal central, compatible con tema oscuro sin cubrir otras áreas permanentemente */
+.ot-alert-backdrop{position:fixed;inset:0;z-index:2000;background:rgba(4,9,16,.77);display:flex;align-items:center;justify-content:center;padding:18px}
+.ot-alert-dialog{width:min(100%,430px);padding:26px 25px;background:#243442;border:1px solid #b68b4f;border-radius:15px;box-shadow:0 16px 60px #000a;text-align:center;color:#eaf0f4}
+.ot-alert-symbol{font-size:35px;line-height:1.3}
+.ot-alert-dialog h2{margin:12px 0;font-size:21px;color:white}
+.ot-alert-dialog p{line-height:1.55;font-size:14px}
+.ot-alert-muted{color:#c1cfda}
+.ot-alert-actions{display:flex;gap:10px;margin-top:22px}
+.ot-alert-actions button{flex:1;background:#3a8bb0;color:#fff}
+.ot-alert-actions button.ot-alert-secondary{background:#243442;border:1px solid #9cb0c0;color:#e0e8ef}
+@media(max-width:420px){.ot-alert-dialog{padding:20px 16px}.ot-alert-actions{flex-direction:column}}
